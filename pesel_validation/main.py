@@ -1,5 +1,5 @@
 # Linia poniżej służy do importowania klasy PeselValidator z modułu pesel_validator
-from pesel_validator import PeselValidator
+from pesel_validation.pesel_validator import PeselValidator
 
 """
 Linia poniżej wyświetla użytkownikowi wiadomość o treści "Podaj pesel: ", pobiera od niego wartość po wciśnięciu
