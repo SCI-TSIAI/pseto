@@ -1,31 +1,23 @@
-import os
-from time import sleep
+# from json import dumps
+#
+#
+# class A:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#
+#     def __str__(self):
+#         return dumps(self.__dict__)
+#
+#
+# print(A("abc", "def"))
 
-from morse import Morse
 
-"""
-Należy napisać program, który będzie pobierał od użytkownika
- jakąkolwiek treść i tłumaczył ją na alfabet morse'a.
- Następnie ma zasymulować przesłanie tego sygnału przez telegraf
- (w odpowiednich interwałach wypisywać słowa "Kropka", "Kreska").
-"""
+def srednia(elements=()):
+    wynik = 0
+    for element in elements:
+        wynik += element
+    return wynik / len(elements)
 
-unit = 1 / 3
 
-user_input = input("Wiadomość: ")
-
-encoded = Morse.encode(user_input)
-
-for word in encoded.split("  "):
-    for letter in word.split(" "):
-        for symbol in letter:
-            if symbol == ".":
-                print("Kropka")
-                sleep(unit)
-                print("Koniec kropki")
-            elif symbol == "-":
-                print("Kreska")
-                sleep(unit * 3)
-                print("Koniec kreski")
-        sleep(unit * 3)
-    sleep(unit * 4)
+print(srednia((1, 2, 3, 4, 5, 6, 7)))
